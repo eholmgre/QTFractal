@@ -33,8 +33,7 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
         mandelbrotframe.h \
-        simplemandelbrotframe.h \
-        simplematrix.h
+        simplemandelbrotframe.h
 
 FORMS += \
         mainwindow.ui

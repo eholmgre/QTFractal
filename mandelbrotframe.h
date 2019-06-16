@@ -4,8 +4,8 @@
 #include <complex>
 #include <cmath>
 #include <stdexcept>
+#include <boost/multi_array.hpp>
 
-#include "simplematrix.h"
 
 class MandelbrotFrame
 {
@@ -20,10 +20,12 @@ protected:
 
 
 public:
+    typedef boost::multi_array<uint, 2> array_type;
+
     MandelbrotFrame(std::complex<double> pt_1,
                     std::complex<double> pt_2, int width, int height);
     
-    virtual SimpleMatrix<int> computeFrame(int max_iterations) = 0;
+    virtual array_type computeFrame(uint max_iterations) = 0;
 };
 
 #endif // MANDELBROTFRAME_H

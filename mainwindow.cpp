@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    scene = std::make_shared<QGraphicsScene>();
 }
 
 MainWindow::~MainWindow()
@@ -54,10 +55,10 @@ void MainWindow::on_draw_button_clicked()
             }
         }
 
-        scene = std::make_shared<QGraphicsScene>();
         //view = std::make_shared<QGraphicsView>(scene.get());
         pixmap = std::make_shared<QGraphicsPixmapItem>(QPixmap::fromImage(render));
 
+        scene.get()->clear();
         scene.get()->addItem(pixmap.get());
         //view.get()->show();
 

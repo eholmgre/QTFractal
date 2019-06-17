@@ -31,7 +31,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     std::shared_ptr<QGraphicsScene> scene;
-    std::shared_ptr<QGraphicsView> view;
+    //std::shared_ptr<QGraphicsView> view;
     std::shared_ptr<QGraphicsPixmapItem> pixmap;
 };
 

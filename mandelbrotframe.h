@@ -24,6 +24,10 @@ public:
 
     MandelbrotFrame(std::complex<double> pt_1,
                     std::complex<double> pt_2, int width, int height);
+
+    void setFrame(std::complex<double> pt_1,
+                    std::complex<double> pt_2,
+                    int width, int height);
     
     virtual array_type computeFrame(uint max_iterations) = 0;
 };

@@ -10,8 +10,10 @@
 #include <QImage>
 #include <complex>
 #include <memory>
+#include <stdexcept>
 
 #include "simplemandelbrotframe.h"
+#include "fractalcolorizer.h"
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +32,10 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    std::shared_ptr<MandelbrotFrame> frame;
+    std::shared_ptr<FractalColorizer> colorizor;
+
     std::shared_ptr<QGraphicsScene> scene;
     //std::shared_ptr<QGraphicsView> view;
     std::shared_ptr<QGraphicsPixmapItem> pixmap;
